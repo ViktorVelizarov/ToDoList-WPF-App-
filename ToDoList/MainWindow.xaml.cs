@@ -24,5 +24,19 @@ namespace ToDoList
         {
             InitializeComponent();
         }
+        private void TodoButton_Click(object sender,  RoutedEventArgs a)
+        {
+            string text = ToDoInput.Text;
+            if(!string.IsNullOrEmpty(text))
+            {
+                TextBlock item = new TextBlock
+                {
+                    Text = text,    
+                    Margin = new Thickness(10)
+                };
+                ToDoList.Children.Add(item);
+                ToDoInput.Clear();
+            }
+        }
     }
 }

@@ -23,8 +23,12 @@
             <RowDefinition Height="10"/>
         </Grid.RowDefinitions>
 
-        <Button Grid.Row="5" Grid.Column="1" Content="create ToDo"/>
+        <Button Click="TodoButton_Click" Grid.Row="5" Grid.Column="1" Content="create ToDo"/>
 
-        <TextBox Grid.Row="3" Grid.Column="1"/>
+        <TextBox x:Name="ToDoInput" Grid.Row="3" Grid.Column="1" Background="#FF154313" Foreground="#FFEBEBEB"/>
+
+        <ScrollViewer Grid.Row="1" Grid.Column="1" VerticalScrollBarVisibility="Auto">
+            <StackPanel x:Name="ToDoList" Background="#FF7FD08F"></StackPanel>
+        </ScrollViewer>
     </Grid>
 </Window>
